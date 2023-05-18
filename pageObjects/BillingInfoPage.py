@@ -12,11 +12,11 @@ class BillingInfo:
     def __init__(self, driver):
         self.driver = driver
 
-    credit_card_element = (By.CSS_SELECTOR, 'input[name="cardnumber"]')
-    exp_element = (By.CSS_SELECTOR, 'input[name="exp-date"]')
+    credit_card_element = (By.CSS_SELECTOR, 'input[name="number"]')
+    exp_element = (By.CSS_SELECTOR, 'input[name="expiry"]')
     cvc_element = (By.CSS_SELECTOR, 'input[name="cvc"]')
-    zip_element = (By.CSS_SELECTOR, 'input[name="postal"]')
-    submit_element = (By.CSS_SELECTOR, 'button[class="btn mt-5 btn-primary btn-lg btn-block"]')
+    zip_element = (By.CSS_SELECTOR, 'input[name="postalCode"]')
+    submit_element = (By.CSS_SELECTOR, 'button[class="btn mt-5 animated fadeIn btn-primary btn-lg btn-block"]')
 
     def provide_cc_info(self):
         self.driver.implicitly_wait(5)

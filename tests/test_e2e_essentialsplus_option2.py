@@ -5,7 +5,6 @@ from pageObjects.BillingInfoPage import BillingInfo
 from pageObjects.CreateYourAccountPage import CreateYourAccount
 from pageObjects.EssentialsPlusBundlePage import EssentialsPlusPage
 from pageObjects.HomePage import HomePage
-from pageObjects.McGoPage import McGoPage
 from pageObjects.PlaceOrderPage import PlaceOrder
 from pageObjects.ProductsPage import ProductsPage
 from pageObjects.ReviewYourOrderPage import ReviewYourOrder
@@ -45,6 +44,7 @@ class TestTwo(BaseClass):
 
     def test_review_order(self):
         log = self.getlogger()
+        time.sleep(1)
         self.driver.switch_to.window(self.driver.window_handles[1])
         review_order = ReviewYourOrder(self.driver)
         review_order.reviewyourorder()

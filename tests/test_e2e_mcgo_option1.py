@@ -45,6 +45,7 @@ class TestOne(BaseClass):
 
     def test_review_order(self):
         log = self.getlogger()
+        time.sleep(1)
         self.driver.switch_to.window(self.driver.window_handles[1])
         review_order = ReviewYourOrder(self.driver)
         review_order.reviewyourorder()
